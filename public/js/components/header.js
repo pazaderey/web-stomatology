@@ -8,8 +8,8 @@ headerTemplate.innerHTML = `
 }
 
 #logo {
-    height: 3rem;
-    width: 3rem;
+    height: 4rem;
+    width: 4rem;
 }
 
 #nav {
@@ -40,7 +40,7 @@ headerTemplate.innerHTML = `
 </style>
 <header id="header">
     <nav id="nav">
-        <img src="../img/203191.ico" id="logo" />
+        <img src="../img/logo.svg" id="logo" />
         <div class="nav-elem"><a class="nav-link" href="/"><span>Home</span></a></div>
         <div class="nav-elem"><a class="nav-link" href="/detect"><span>Detect</span></a></div>
         <div class="nav-elem"><a class="nav-link" href="/help"><span>Help</span></a></div>
