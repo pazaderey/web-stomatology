@@ -5,6 +5,8 @@ headerTemplate.innerHTML = `
     background-color: #BD81C9;
     height: 4.5rem;
     display: flex;
+    position: sticky;
+    top: 0;
 }
 
 #logo {
@@ -29,7 +31,8 @@ headerTemplate.innerHTML = `
 
 .nav-elem {
     height: 2.5rem;
-    width: 6rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     text-align: center;
     font-size: 1.5rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -40,12 +43,11 @@ headerTemplate.innerHTML = `
 </style>
 <header id="header">
     <nav id="nav">
-        <img src="../img/logo.svg" id="logo" />
-        <div class="nav-elem"><a class="nav-link" href="/"><span>Home</span></a></div>
-        <div class="nav-elem"><a class="nav-link" href="/detect"><span>Detect</span></a></div>
-        <div class="nav-elem"><a class="nav-link" href="/help"><span>Help</span></a></div>
-        <div class="nav-elem"><a class="nav-link" href="/feedback"><span>Feedback</span></a></div>
-        <div class="nav-elem"><a class="nav-link" href="/about"><span>About</span></a></div>
+        <a class="nav-link" href="/"><img src="../img/logo.svg" id="logo" /></a>
+        <div class="nav-elem"><a class="nav-link" href="/detect"><span>Обнаружение</span></a></div>
+        <div class="nav-elem"><a class="nav-link" href="/help"><span>Помощь</span></a></div>
+        <div class="nav-elem"><a class="nav-link" href="/feedback"><span>Отзывы</span></a></div>
+        <div class="nav-elem"><a class="nav-link" href="/about"><span>О нас</span></a></div>
     </nav>
 </header>
 `;
@@ -62,3 +64,5 @@ class Header extends HTMLElement {
 }
 
 customElements.define("header-component", Header);
+
+
