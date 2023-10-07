@@ -2,11 +2,11 @@ const footerTemplate = document.createElement("template");
 footerTemplate.innerHTML = `
 <style>
 #footer {
-    height: 11rem;
-    background-color: #BD81C9;
+    height: 12rem;
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding-top: 1rem;
 }
 
 #footer-container {
@@ -33,6 +33,7 @@ footerTemplate.innerHTML = `
 
 .footer-copyright {
     height: 3rem;
+    background-color: #BD81C9;
 }
 
 span.contacts {

@@ -41,6 +41,7 @@ div.review > h3 {
 }
 
 div.review > section > p {
+    text-align: justify;
     overflow-wrap: break-word;
 }
 

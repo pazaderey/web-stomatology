@@ -17,3 +17,7 @@ section.main-slider {
     flex-direction: column;
     align-items: center;
 }
+
+section.main-slider > p {
+    font-size: 1.3rem;
+}
