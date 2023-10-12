@@ -49,6 +49,26 @@ headerTemplate.innerHTML = `
         align-items: center;
     }
 
+    .auth-icon {
+        height: 3rem;
+        padding-left: 1%;
+        padding-right: 1%;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+    }
+
+    .auth-icon > a {
+        display: flex;
+        align-items: center;
+    }
+
+
+    .auth-icon > a > img {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+
     .dropdown {
         display: none;
     }
@@ -62,6 +82,14 @@ headerTemplate.innerHTML = `
         border-radius: 5px;
         box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
     }
+
+    .login-btn-dropdown {
+        width: 5rem;
+        height: 2rem;
+        background-color: inherit;
+        border: 3px solid #BD81C9;
+        border-radius: 20px;
+    }
     
     .dropdown:hover .dropdown-options {
         display: block;
@@ -74,8 +102,12 @@ headerTemplate.innerHTML = `
         padding: 15px 30px;
     }
 
-    @media (max-width: 550px) {
+    @media (max-width: 600px) {
         .nav-elem {
+            display: none;
+        }
+
+        .auth-icon {
             display: none;
         }
 
@@ -109,6 +141,7 @@ headerTemplate.innerHTML = `
                 <a href="/help">Помощь</a>
                 <a href="/feedback">Отзывы</a>
                 <a href="/about">О нас</a>
+                <a href="/login"><button class="login-btn-dropdown">Войти</button></a>
             </div>
         </div>
 
@@ -116,8 +149,10 @@ headerTemplate.innerHTML = `
         <div class="nav-elem"><a class="nav-link" href="/help"><span>Помощь</span></a></div>
         <div class="nav-elem"><a class="nav-link" href="/feedback"><span>Отзывы</span></a></div>
         <div class="nav-elem"><a class="nav-link" href="/about"><span>О нас</span></a></div>
+        <div class="auth-icon"><a href="/login"><img src="../../img/user-interface.png"/></a></div>
     </nav>
 </header>
+
 `;
 
 class Header extends HTMLElement {

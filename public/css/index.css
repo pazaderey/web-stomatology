@@ -20,4 +20,5 @@ section.main-slider {
 
 section.main-slider > p {
     font-size: 1.3rem;
+    text-align: justify;
 }
