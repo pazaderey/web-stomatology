@@ -3,7 +3,14 @@ const path = require("path");
 
 const app = express();
 
-const AVAILABLE_URLS = new Set(["/index", "/about", "/feedback", "/help", "/detect", "/login"]);
+const AVAILABLE_URLS = new Set([
+    "/index",
+    "/about",
+    "/feedback",
+    "/help",
+    "/detect",
+    "/login",
+]);
 
 app.use(express.static(path.join(__dirname, "public")))
 

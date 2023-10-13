@@ -8,6 +8,7 @@ headerTemplate.innerHTML = `
         display: flex;
         position: sticky;
         top: 0;
+        z-index: 10;
     }
 
     #logo {
@@ -88,6 +89,7 @@ headerTemplate.innerHTML = `
         height: 2rem;
         background-color: inherit;
         border: 3px solid #BD81C9;
+        font-size: 1.3rem;
         border-radius: 20px;
     }
     
@@ -99,6 +101,7 @@ headerTemplate.innerHTML = `
         display: block;
         color: #000000;
         text-decoration: none;
+        font-size: 1.3rem;
         padding: 15px 30px;
     }
 
