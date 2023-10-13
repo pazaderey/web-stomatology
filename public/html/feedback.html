@@ -1,20 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback</title>
+    <title>Отзывы</title>
+    <link rel="icon" type="image/x-icon" href="../img/logo.ico">
     <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/feedback.css" />
+    <script src="../js/components/header.js" type="text/javascript" defer></script>
+    <script src="../js/components/footer.js" type="text/javascript" defer></script>
 </head>
+
 <body>
-    <header id="header">
-        <nav id="nav">
-            <img src="../img/203191.ico" id="logo" />
-            <div class="nav-elem"><a class="nav-link" href="/"><span>Home</span></a></div>
-            <div class="nav-elem"><a class="nav-link" href="/feedback"><span>Feedback</span></a></div>
-            <div class="nav-elem"><a class="nav-link" href="/about"><span>About</span></a></div>
-        </nav>
-    </header>
-    Feedback page
+    <header-component></header-component>
+
+    <main>
+        <section class="feedback-head">
+            <h1>Отзывы</h1>
+        </section>
+        <section class="reviews-container">
+            <!--             <div>
+                <h2>Пока что здесь пусто...</h2>
+            </div> -->
+            <div class="review-wrapper">
+                <div class="review">
+                    <section>
+                        <h3>Иван Иванов</h3>
+                        <p>Кто-то там</p>
+                    </section>
+                    <section>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula, risus at pretium
+                            efficitur, magna ante gravida nunc, ac bibendum lacus felis malesuada velit. Quisque vitae
+                            nibh ante. In at dignissim ex, non eleifend augue. Nulla at ex elementum, hendrerit lectus
+                            non, porta diam. Vestibulum fermentum lectus nibh, et fermentum urna pellentesque at.
+                            Curabitur vitae aliquam metus. Sed lacus nunc, fringilla eu accumsan a, euismod a nisl.
+                            Mauris mauris lorem, ornare non ex eu, tincidunt tempor sem. Aliquam pretium, diam eu
+                            bibendum ultricies, est ligula elementum metus, sed malesuada nulla tellus sed lacus.
+                            Pellentesque pharetra eros eleifend lobortis sollicitudin.</p>
+                    </section>
+                </div>
+            </div>
+            <div class="review-wrapper">
+                <div class="review">
+                    <section>
+                        <h3>Иван Иванов</h3>
+                        <p>Кто-то там</p>
+                    </section>
+                    <section>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula, risus at pretium
+                            efficitur, magna ante gravida nunc, ac bibendum lacus felis malesuada velit. Quisque vitae
+                            nibh ante. In at dignissim ex, non eleifend augue. Nulla at ex elementum, hendrerit lectus
+                            non, porta diam. Vestibulum fermentum lectus nibh, et fermentum urna pellentesque at.
+                            Curabitur vitae aliquam metus. Sed lacus nunc, fringilla eu accumsan a, euismod a nisl.
+                            Mauris mauris lorem, ornare non ex eu, tincidunt tempor sem.</p>
+                    </section>
+                </div>
+            </div>
+            <div class="review-wrapper">
+                <div class="review">
+                    <section>
+                        <h3>Иван Иванов</h3>
+                        <p>Кто-то там</p>
+                    </section>
+                    <section>
+                        <p>Integer vehicula, risus at pretium efficitur, magna ante gravida nunc, ac bibendum lacus
+                            felis malesuada velit. Quisque vitae nibh ante. In at dignissim ex, non eleifend augue.
+                            Nulla at ex elementum, hendrerit lectus non, porta diam. Vestibulum fermentum lectus nibh,
+                            et fermentum urna pellentesque at. Curabitur vitae aliquam metus. Sed lacus nunc, fringilla
+                            eu accumsan a, euismod a nisl. Mauris mauris lorem, ornare non ex eu, tincidunt tempor sem.
+                            Aliquam pretium, diam eu bibendum ultricies, est ligula elementum metus, sed malesuada nulla
+                            tellus sed lacus. Pellentesque pharetra eros eleifend lobortis sollicitudin.
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer-component></footer-component>
 </body>
+
 </html>

@@ -1,0 +1,60 @@
+section.feedback-head {
+    height: 15rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.feedback-head > h1 {
+    width: 60%;
+    font-size: 5rem;
+    text-align: left;
+    border-bottom: 1px solid #d3d3d3;
+}
+
+section.reviews-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 60%;
+    min-height: 30rem;
+}
+
+.review-container > div > h2 {
+    font-size: 3rem;
+}
+
+div.review-wrapper {
+    padding: 1%;
+    min-width: 15rem;
+    max-width: 48%;
+}
+
+div.review {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+div.review > h3 {
+    margin: 0;
+}
+
+div.review > section > p {
+    text-align: justify;
+    overflow-wrap: break-word;
+}
+
+@media (max-width: 350px) {
+    section.feedback-head {
+        height: 10rem;
+    }
+
+    .feedback-head > h1 {
+        font-size: 3rem;
+    }
+
+    div.review-wrapper {
+        min-width: 10rem;
+    }
+}

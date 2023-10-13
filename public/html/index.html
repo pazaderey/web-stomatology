@@ -4,22 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Dent.ai</title>
     <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/slider.css" />
+    <link rel="icon" type="image/x-icon" href="../img/logo.ico">
+    <script src="../js/components/header.js" type="text/javascript" defer></script>
+    <script src="../js/components/footer.js" type="text/javascript" defer></script>
 </head>
 
 <body>
-    <header id="header">
-        <nav id="nav">
-            <img src="../img/203191.ico" id="logo" />
-            <div class="nav-elem"><a class="nav-link" href="/"><span>Home</span></a></div>
-            <div class="nav-elem"><a class="nav-link" href="/feedback"><span>Feedback</span></a></div>
-            <div class="nav-elem"><a class="nav-link" href="/about"><span>About</span></a></div>
-        </nav>
-    </header>
+    <header-component></header-component>
 
-    <main>Some text</main>
-    <footer>Footer</footer>
+    <main>
+        <h1>Искусственный интеллект для стоматологов</h1>
+        <section class="flexrow-container">
+            <p>
+                Наше приложение поможет точнее диагностировать заболевания ротовой полости по
+                панорамным рентгеновским снимкам. Оно поможет как начинающим специалистам, так и
+                практикующим профессионалам.
+            </p>
+            <div class="slider-container">
+                <div class="slider">
+                    <img src="../img/slider-1.jpg" alt="Приём у стоматолога">
+                    <img src="../img/slider-2.jpg" alt="Панорамный снимок">
+                    <img src="../img/slider-3.jpg" alt="Анализ снимка">
+                </div>
+                <button class="prev-button" aria-label="Посмотреть предыдущий слайд">&lt;</button>
+                <button class="next-button" aria-label="Посмотреть следующий слайд">&gt</button>
+            </div>
+        </section>
+        <section class="main-pros">
+            <p>
+                Данные компьютерной томографии выгружается в программу с искусственным интеллектом,
+                которая умеет сканировать и диагностировать зубные патологии, а дальше фиксирует
+                их в виде понятного отчета. Таким образом, врач может получить более подробную, а
+                главное - независимую клиническую картину, а значит, составить самый эффективный план лечения.
+            </p>
+            <h2>Чем вам поможет наш сервис?</h2>
+            <ul>
+                <li>Более точный диагноз</li>
+                <li>Наглядное объяснение для пациента</li>
+                <li>Независимое решение</li>
+            </ul>
+        </section>
+        <section class="flexrow-container">
+            <img src="../img/dentist-img.jpg"/>
+            <p>
+                Получите доступ к эффективному инструменту уже сейчас.
+                Использование современных технологий вместе Dent.io
+                на приёме - ваше конкурентное преимущество!
+            </p>
+        </section>
+    </main>
+
+    <footer-component></footer-component>
 </body>
+<script src="../js/slider.js"></script>
 
 </html>
