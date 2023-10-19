@@ -15,8 +15,9 @@ section.feedback-head {
 section.reviews-container {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
-    width: 60%;
+    width: 80%;
     min-height: 30rem;
 }
 
@@ -26,7 +27,7 @@ section.reviews-container {
 
 div.review-wrapper {
     padding: 1%;
-    min-width: 15rem;
+    min-width: 25rem;
     max-width: 48%;
 }
 

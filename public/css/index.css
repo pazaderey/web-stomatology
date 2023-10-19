@@ -22,7 +22,7 @@ section {
   width: 90%;
 }
 
-section.main-pros {
+section.main-section {
   padding-left: 10%; 
 }
 
@@ -33,6 +33,13 @@ section {
 section.flexrow-container {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+section.flexcol-container {
+  display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
 }
@@ -52,45 +59,4 @@ section.flexrow-container > img {
   min-width: 300px;
   min-height: 200px;
   overflow: hidden;
-}
-
-.slider-container {
-  position: relative;
-  width: 50%;
-  min-width: 300px;
-  min-height: 200px;
-  overflow: hidden;
-}
-
-.slider {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.slider img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 1rem;
-}
-
-.prev-button,
-.next-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
-  background-color: transparent;
-  border: none;
-  font-size: 24px;
-  color: white;
-}
-
-.prev-button {
-  left: 10px;
-}
-
-.next-button {
-  right: 10px;
 }

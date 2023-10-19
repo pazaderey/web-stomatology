@@ -12,6 +12,7 @@ const AVAILABLE_URLS = new Set([
     "/login",
 ]);
 
+app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")))
 
 app.get(/.+/, (req, res) => {
@@ -23,4 +24,9 @@ app.get(/.+/, (req, res) => {
     res.sendFile(path.join(__dirname, `public/html${url}.html`));
 });
 
-app.listen(4000, () => console.log("started"));
+app.post("/form", (req, res) => {
+    console.log(req.body);
+    res.sendStatus(200);
+});
+
+app.listen(4000, () => console.log("started on 4000"));

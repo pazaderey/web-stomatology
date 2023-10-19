@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "start:dev" : "node index.js --watch"
+    "start:dev": "node index.js --watch"
   },
   "repository": {
     "type": "git",
