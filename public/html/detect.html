@@ -6,6 +6,7 @@
     <title>Диагностика</title>
     <link rel="icon" type="image/x-icon" href="../img/logo.ico">
     <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/drag-n-drop.css" />
     <script src="../js/components/header.js" type="text/javascript" defer></script>
     <script src="../js/components/footer.js" type="text/javascript" defer></script>
 </head>
@@ -14,14 +15,22 @@
 
     <main>
         <h1>Диагностика</h1>
-        <section class="flexcol-container main-section">
+        <section class="flexcol-container flex-centered">
             <p>
                 Загрузите файл с панорамным рентгеновским снимком для начала диагностики в форму ниже.
             </p>
-            <input type="file"/>
+            <div id="drop-area">
+                <form class="detect-form">
+                    <p>Перетащите или нажмите чтобы загрузить файл</p>
+                    <input type="file" id="detect-input-file" accept="image/*" onchange="handleDrop">
+                    <label class="button" for="detect-input-file">Выбрать файл</label>
+                </form>
+                <div id="gallery"></div>
+            </div>
         </section>
     </main>
 
     <footer-component></footer-component>
 </body>
+<script src="../js/drag-n-drop.js"></script>
 </html>

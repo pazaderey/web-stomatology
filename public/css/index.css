@@ -4,6 +4,7 @@ body {
 }
 
 main {
+  padding: 2%;
   min-height: calc(100vh - 15.5rem);
   display: flex;
   flex-direction: column;
@@ -14,42 +15,56 @@ main {
 h1 {
   font-size: 2.5rem;
   font-weight: bold;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 
 section {
   width: 90%;
 }
 
+button, .button {
+  background-color: inherit;
+  border: 3px solid #bd81c9;
+  border-radius: 20px;
+}
+
 section.main-section {
-  padding-left: 10%; 
+  padding-left: 7%; 
 }
 
 section {
   font-size: 1.9rem;
 }
 
-section.flexrow-container {
+a.black-link {
+  text-decoration-color: #000000;
+  color: #000000;
+}
+
+.flexrow-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-section.flexcol-container {
+.flexcol-container {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
+.flex-centered {
+  align-items: center;
+}
+
 section.flexrow-container p {
   max-width: 26rem;
   margin-top: auto;
-  padding-bottom: 2%;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 
 section.flexrow-container > img {

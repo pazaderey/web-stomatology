@@ -14,8 +14,7 @@ function sendFormData(event) {
     }).then((resp) => {
         if (resp.status >= 200 && resp.status < 300) {
             form.innerHTML = "Спасибо!";
-            form.style.transition = "height 0.5s ease-in-out";
-            form.style.height = "2rem";
+            form.classList.add("submitted");
         } else {
             alert("Что-то пошло не так :(");
             window.location.href = "/";

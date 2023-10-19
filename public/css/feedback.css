@@ -1,5 +1,5 @@
 section.feedback-head {
-    height: 15rem;
+    height: 5rem;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -7,8 +7,11 @@ section.feedback-head {
 
 .feedback-head > h1 {
     width: 60%;
-    font-size: 5rem;
+    height: 100%;
+    font-size: 3rem;
     text-align: left;
+    padding-top: 1rem;
+    margin-bottom: 0;
     border-bottom: 1px solid #d3d3d3;
 }
 
@@ -27,13 +30,18 @@ section.reviews-container {
 
 div.review-wrapper {
     padding: 1%;
-    min-width: 25rem;
+    min-width: 20rem;
     max-width: 48%;
 }
 
 div.review {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    padding: 2%;
+}
+
+div.review > section {
     width: 100%;
 }
 

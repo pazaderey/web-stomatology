@@ -25,7 +25,7 @@ app.get(/.+/, (req, res) => {
 });
 
 app.post("/form", (req, res) => {
-    console.log(req.body);
+    console.log("got form");
     res.sendStatus(200);
 });
 
