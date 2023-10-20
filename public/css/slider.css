@@ -38,3 +38,9 @@
 .next-button {
   right: 10px;
 }
+
+@media (max-width: 1110px) {
+  .slider-container {
+    width: 80%;
+  }
+}

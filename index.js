@@ -25,9 +25,7 @@ app.get(/.+/, (req, res) => {
 });
 
 app.post("/form", (req, res) => {
-    console.log("got form");
     globalThis.setTimeout(() => {
-        console.log("responded");
         res.sendStatus(200);
     }, 5000);
     

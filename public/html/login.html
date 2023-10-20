@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +10,29 @@
     <script src="../js/components/header.js" type="text/javascript" defer></script>
     <script src="../js/components/footer.js" type="text/javascript" defer></script>
 </head>
+
 <body>
     <header-component></header-component>
 
-    <main>Login page</main>
+    <main>
+        <section id="login">
+            <form class="flexcol-container flex-centered login-form-container">
+                <div class="flexcol-container login-container">
+                    <label>Логин</label>
+                    <input type="text" required>
+                </div>
+                <div class="flexcol-container login-container">
+                    <label>Пароль</label>
+                    <input type="text" required>
+                </div>
+                <div class="flexcol-container login-container">
+                    <button id="login-button">Войти</button>
+                </div>
+            </form>
+        </section>
+    </main>
 
     <footer-component></footer-component>
 </body>
+
 </html>

@@ -5,11 +5,12 @@ body {
 
 main {
   padding: 2%;
-  min-height: calc(100vh - 15.5rem);
+  min-height: calc(100vh - 17.5rem);
+  height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-start;
 }
 
 h1 {
@@ -62,10 +63,9 @@ a.black-link {
 }
 
 section.flexrow-container p {
+  padding: 3%;
   max-width: 26rem;
   margin-top: auto;
-  padding-left: 3%;
-  padding-right: 3%;
 }
 
 section.flexrow-container > img {
@@ -75,4 +75,48 @@ section.flexrow-container > img {
   min-width: 300px;
   min-height: 200px;
   overflow: hidden;
+}
+
+.login-form-container {
+  flex-wrap: nowrap;
+  max-width: 20rem;
+  width: 80%;
+}
+
+section#login {
+  display: flex;
+  justify-content: center;
+  height: 20rem;
+}
+
+.login-container {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 2rem;
+  width: 100%;
+}
+
+.login-container > input {
+  font-size: 1.6rem;
+  width: 100%;
+}
+
+.login-container > label {
+  width: 100%;
+}
+
+#login-button {
+  width: 50%;
+  height: 50%;
+  font-size: 1.6rem;
+}
+
+@media (max-width: 1110px) {
+  section.flexrow-container p {
+    max-width: 60rem;
+  }
+  section.flexrow-container > img, .slider-container {
+    width: 80%;
+  }
 }
