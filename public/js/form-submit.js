@@ -1,4 +1,5 @@
 const form = document.querySelector("form");
+const buttonHolder = document.querySelector("div#button-holder");;
 form.addEventListener("submit", sendFormData);
 
 function sendFormData(event) {
@@ -20,6 +21,12 @@ function sendFormData(event) {
             window.location.href = "/";
         }
     });
+    const loader = document.createElement("img");
+    loader.classList.add("loader");
+    loader.src = "../img/loading.gif";
+    loader.style.width = "4rem";
+    buttonHolder.innerHTML = '';
+    buttonHolder.appendChild(loader);
 }
 
 //height: 25rem;

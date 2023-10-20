@@ -22,6 +22,7 @@ h1 {
 
 section {
   width: 90%;
+  font-size: 1.9rem;
 }
 
 button, .button {
@@ -29,14 +30,15 @@ button, .button {
   border: 3px solid #bd81c9;
   border-radius: 20px;
   cursor: pointer;
+  transition: background-color 0.2s linear;
+}
+
+button:hover, .button:hover {
+  background-color: #bd81c9;
 }
 
 section.main-section {
   padding-left: 7%; 
-}
-
-section {
-  font-size: 1.9rem;
 }
 
 a.black-link {
@@ -81,6 +83,46 @@ section.flexrow-container > img {
   flex-wrap: nowrap;
   max-width: 20rem;
   width: 80%;
+}
+
+.grid-3rows-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.article-container {
+  padding: 5%;
+}
+
+.article-container > h5 {
+  margin: 0;
+  padding-top: 1%;
+  font-size: 1.3rem;
+}
+
+.article-container > label {
+  display: block;
+  height: 2rem;
+  width: 10rem;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.article-container > label > a {
+  text-decoration-line: none;
+}
+
+p.article-date {
+  margin: 0;
+  font-size: 1rem;
+}
+
+p.article-authors {
+  padding-top: 2%;
+  margin: 0;
+  font-size: 1rem;
+  color: gray;
+  padding-bottom: 5%;
 }
 
 section#login {

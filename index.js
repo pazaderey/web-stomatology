@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")))
 
 app.get(/.+/, (req, res) => {
-    const url = req.originalUrl === "/" ? "/index" : req.url;
+    const url = req.path === "/" ? "/index" : req.path;
     if (!AVAILABLE_URLS.has(url)) {
         res.sendFile(path.join(__dirname, "public/html/not-found.html"));
         return;

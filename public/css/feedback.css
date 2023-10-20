@@ -17,7 +17,7 @@ section.feedback-head {
 
 section.reviews-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 30rem);
+    grid-template-columns: repeat(auto-fill, minmax(17rem, 30rem));
     justify-content: center;
     width: 85%;
     min-height: 30rem;
