@@ -10,13 +10,14 @@ const AVAILABLE_URLS = new Set([
     "/help",
     "/detect",
     "/login",
+    "/profile",
 ]);
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")))
 
 app.get(/.+/, (req, res) => {
-    const url = req.url === "/" ? "/index" : req.url;
+    const url = req.originalUrl === "/" ? "/index" : req.url;
     if (!AVAILABLE_URLS.has(url)) {
         res.sendFile(path.join(__dirname, "public/html/not-found.html"));
         return;
