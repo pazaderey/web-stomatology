@@ -1,5 +1,6 @@
 const area = document.getElementById("drop-area");
 const gallery = document.getElementById("gallery");
+const form = document.getElementById("detect-form");
 
 ["dragenter", "dragover", "dragleave", "drop"].forEach((eventName) => {
     area.addEventListener(eventName, preventDefaults, false);
@@ -32,22 +33,33 @@ function handleDrop(event) {
     const dt = event.dataTransfer;
     const files = dt.files;
 
-    uploadFile(files[0]);
-    previewFile(files[0]);
+    uploadFile(files[0]).then(() => {
+        form.innerHTML = '';
+        previewFile(files[0]);
+    });
+    startLoading();
+}
+
+function startLoading() {
+    form.innerHTML = "";
+    area.style.backgroundImage = "none";
+    const loader = document.createElement("img");
+    loader.classList.add("loader");
+    loader.src = "../img/loading.gif";
+    form.appendChild(loader);
 }
 
 /**
  * @param {File} file 
  */
-function uploadFile(file) {
+async function uploadFile(file) {
     const data = new FormData();
     data.append('file', file);
 
-    fetch("/form", {
+    return fetch("/form", {
         method: "POST",
         body: data,
-    })
-    .then(console.log);
+    });
 }
 
 /**
@@ -60,7 +72,7 @@ function previewFile(file) {
         const img = document.createElement("img");
         img.src = reader.result;
         img.style.width = "100%";
-        img.style.height = "100%";
+        form.style.minHeight = "0rem";
         gallery.innerHTML = "";
         gallery.appendChild(img);
     }

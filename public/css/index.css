@@ -27,6 +27,7 @@ button, .button {
   background-color: inherit;
   border: 3px solid #bd81c9;
   border-radius: 20px;
+  cursor: pointer;
 }
 
 section.main-section {
