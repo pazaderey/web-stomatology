@@ -1,26 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Профиль</title>
     <link rel="icon" type="image/x-icon" href="../img/logo.ico">
     <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/profile.css" />
     <script src="../js/components/header.js" type="text/javascript" defer></script>
     <script src="../js/components/footer.js" type="text/javascript" defer></script>
 </head>
+
 <body>
     <header-component></header-component>
 
     <main>
-        <section>
-
+        <section id="profile-info">
+            <h4>Иван Иванов</h4>
+            <form onchange="addButtons()">
+                <div class="profile-input-contianer">
+                    <label>Пол</label>
+                    <select name="sex" required>
+                        <option value="m" selected>Мужской</option>
+                        <option value="f">Женский</option>
+                    </select>
+                </div>
+                <div class="profile-input-contianer">
+                    <label>Email</label>
+                    <input type="email" required value="ivanov@email.abc">
+                </div>
+                <div class="profile-input-contianer">
+                    <label>Телефон</label>
+                    <input type="tel" required value="+7-888-888-88-88">
+                </div>
+                <div class="profile-input-contianer" id="buttons-wrapper">
+                    <button type="submit">Сохранить</button>
+                    <button>Отменить</button>
+                </div>
+            </form>
         </section>
-        <section>
+        <section id="profile-history">
             <h4>История запросов</h4>
+            <div id="table-wrapper">
+                <table id="diagnostics-history">
+                    <thead>
+                        <tr>
+                            <th class="date-col">Дата</th>
+                            <th class="result-col">Результат</th>
+                            <th class="file-col">Файл</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>21.10.2023 10:47</td>
+                            <td>Отклонений не замечено</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>21.10.2023 10:47</td>
+                            <td>Отклонений не замечено</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>21.10.2023 10:47</td>
+                            <td>Отклонений не замечено</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>21.10.2023 10:47</td>
+                            <td>Отклонений не замечено</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
     </main>
 
     <footer-component></footer-component>
 </body>
+<script src="../js/table-colorer.js"></script>
+<script src="../js/profile-saver.js"></script>
+
 </html>

@@ -1,4 +1,5 @@
 body {
+  --additional-color: #bd81c9;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   margin: 0;
 }
@@ -27,7 +28,7 @@ section {
 
 button, .button {
   background-color: inherit;
-  border: 3px solid #bd81c9;
+  border: 3px solid var(--additional-color);
   border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.2s linear;

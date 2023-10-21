@@ -50,6 +50,11 @@ span.email {
     color: #ffffff;
 }
 
+a.white-link {
+    text-decoration-color: #fffff;
+    color: #ffffff;
+}
+
 div.contact-items {
     width: 100%;
     display: flex;
@@ -78,7 +83,7 @@ span.copyright {
                 Задерей Петр Алексеевич
             </span>
             <span class="email">
-                pazaderey@edu.hse.ru
+                <a href="mailto:pazaderey@edu.hse.ru" class="white-link">pazaderey@edu.hse.ru</a>
             </span>
             <div class="contact-items">
                 <a href="https://t.me/pazaderey" target="_blank"><img class="contact-icon" src="../img/telegram.png"/></a>
@@ -97,7 +102,7 @@ class Footer extends HTMLElement {
 
     connectedCallback() {
         const shadowRoot = this.attachShadow({ mode: "closed" });
-        shadowRoot.appendChild(footerTemplate.content); 
+        shadowRoot.appendChild(footerTemplate.content);
     }
 }
 

@@ -1,0 +1,64 @@
+section > h4 {
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+div.profile-input-contianer {
+    width: 40%;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    justify-content: space-between;
+}
+
+div.profile-input-contianer > select,
+div.profile-input-contianer > input {
+    font-size: 1.3rem;
+    width: 80%;
+}
+
+div#buttons-wrapper {
+    padding-top: 2%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(5rem, 10rem));
+    justify-content: start;
+    column-gap: 2%;
+}
+
+div#buttons-wrapper > button {
+    display: none;
+    font-size: 1.2rem;
+}
+
+div#table-wrapper {
+    overflow-x: auto;
+}
+
+table#diagnostics-history {
+    width: 100%;
+}
+
+table#diagnostics-history > thead {
+    background-color: var(--additional-color);
+}
+
+table#diagnostics-history * {
+    font-weight: normal;
+    font-size: 1.5rem;
+}
+
+td, th {
+    height: 2.5rem;
+    text-align: center;
+}
+
+th.date-col {
+    min-width: 10rem;
+}
+
+th.result-col {
+    min-width: 20rem;
+}
+
+th.file-col {
+    min-width: 10rem;
+}
