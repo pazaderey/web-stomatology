@@ -1,5 +1,5 @@
 section.feedback-head {
-    height: 15rem;
+    height: fit-content;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -7,16 +7,19 @@ section.feedback-head {
 
 .feedback-head > h1 {
     width: 60%;
-    font-size: 5rem;
+    height: 100%;
+    font-size: 3rem;
     text-align: left;
+    padding-top: 1rem;
+    margin-bottom: 0;
     border-bottom: 1px solid #d3d3d3;
 }
 
 section.reviews-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(17rem, 30rem));
+    justify-content: center;
+    width: 85%;
     min-height: 30rem;
 }
 
@@ -25,14 +28,17 @@ section.reviews-container {
 }
 
 div.review-wrapper {
-    padding: 1%;
-    min-width: 15rem;
-    max-width: 48%;
+    padding: 1rem;
+    min-width: 17rem;
 }
 
 div.review {
     display: flex;
     flex-direction: column;
+    width: 100%;
+}
+
+div.review > section {
     width: 100%;
 }
 
@@ -42,6 +48,7 @@ div.review > h3 {
 
 div.review > section > p {
     text-align: justify;
+    font-size: 1.5rem;
     overflow-wrap: break-word;
 }
 

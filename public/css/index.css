@@ -1,96 +1,177 @@
 body {
+  --additional-color: #bd81c9;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   margin: 0;
 }
 
 main {
-  min-height: calc(100vh - 15.5rem);
+  padding: 2%;
+  min-height: calc(100vh - 17.5rem);
+  height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-start;
 }
 
 h1 {
   font-size: 2.5rem;
   font-weight: bold;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 
 section {
   width: 90%;
-}
-
-section.main-pros {
-  padding-left: 10%; 
-}
-
-section {
   font-size: 1.9rem;
 }
 
-section.flexrow-container {
+button, .button {
+  background-color: inherit;
+  border: 3px solid var(--additional-color);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+}
+
+button:hover, .button:hover {
+  background-color: #bd81c9;
+}
+
+section.main-section {
+  padding-left: 7%; 
+}
+
+a.black-link {
+  text-decoration-color: #000000;
+  color: #000000;
+}
+
+.flexrow-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
+.flexcol-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.flex-centered {
+  align-items: center;
+}
+
 section.flexrow-container p {
+  padding: 3%;
   max-width: 26rem;
   margin-top: auto;
-  padding-bottom: 2%;
-  padding-left: 5%;
-  padding-right: 5%;
 }
 
 section.flexrow-container > img {
   position: relative;
   border-radius: 1rem;
   width: 50%;
-  min-width: 300px;
+  min-width: 250px;
   min-height: 200px;
   overflow: hidden;
 }
 
-.slider-container {
-  position: relative;
-  width: 50%;
-  min-width: 300px;
-  min-height: 200px;
-  overflow: hidden;
+.login-form-container {
+  flex-wrap: nowrap;
+  max-width: 20rem;
+  width: 80%;
 }
 
-.slider {
+.grid-3rows-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.article-container {
+  padding: 5%;
+}
+
+.article-container > h5 {
+  margin: 0;
+  padding-top: 1%;
+  font-size: 1.3rem;
+}
+
+.article-container > label {
+  display: block;
+  height: 2rem;
+  width: 10rem;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.article-container > label > a {
+  text-decoration-line: none;
+}
+
+p.article-date {
+  margin: 0;
+  font-size: 1rem;
+}
+
+p.article-authors {
+  padding-top: 2%;
+  margin: 0;
+  font-size: 1rem;
+  color: gray;
+  padding-bottom: 5%;
+}
+
+section#login {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  justify-content: center;
+  height: 20rem;
 }
 
-.slider img {
-  width: 100%;
+.login-container {
+  justify-content: center;
+  align-items: center;
   height: 100%;
-  object-fit: cover;
-  border-radius: 1rem;
+  font-size: 2rem;
+  width: 100%;
 }
 
-.prev-button,
-.next-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
-  background-color: transparent;
-  border: none;
-  font-size: 24px;
-  color: white;
+.login-container > input {
+  font-size: 1.6rem;
+  width: 100%;
 }
 
-.prev-button {
-  left: 10px;
+.login-container > label {
+  width: 100%;
 }
 
-.next-button {
-  right: 10px;
+#login-button {
+  width: 50%;
+  height: 50%;
+  font-size: 1.6rem;
+}
+
+@media (max-width: 1110px) {
+  section.flexrow-container p {
+    max-width: 60rem;
+  }
+  section.flexrow-container > img, .slider-container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 900px) {
+  .grid-3rows-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-3rows-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

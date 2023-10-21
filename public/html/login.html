@@ -12,7 +12,23 @@
 <body>
     <header-component></header-component>
 
-    <main>Login page</main>
+    <main>
+        <section id="login">
+            <form class="flexcol-container flex-centered login-form-container" method="get" action="/profile">
+                <div class="flexcol-container login-container">
+                    <label>Логин</label>
+                    <input type="text" required>
+                </div>
+                <div class="flexcol-container login-container">
+                    <label>Пароль</label>
+                    <input type="text" required>
+                </div>
+                <div class="flexcol-container login-container">
+                    <button id="login-button">Войти</button>
+                </div>
+            </form>
+        </section>
+    </main>
 
     <footer-component></footer-component>
 </body>

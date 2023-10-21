@@ -8,6 +8,7 @@
     <link rel="icon" type="image/x-icon" href="../img/logo.ico">
     <link rel="stylesheet" href="../css/index.css" />
     <link rel="stylesheet" href="../css/feedback.css" />
+    <link rel="stylesheet" href="../css/feedback-form.css" />
     <script src="../js/components/header.js" type="text/javascript" defer></script>
     <script src="../js/components/footer.js" type="text/javascript" defer></script>
 </head>
@@ -29,15 +30,12 @@
                         <h3>Иван Иванов</h3>
                         <p>Кто-то там</p>
                     </section>
-                    <section>
+                    <section class="review-text">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula, risus at pretium
                             efficitur, magna ante gravida nunc, ac bibendum lacus felis malesuada velit. Quisque vitae
                             nibh ante. In at dignissim ex, non eleifend augue. Nulla at ex elementum, hendrerit lectus
                             non, porta diam. Vestibulum fermentum lectus nibh, et fermentum urna pellentesque at.
-                            Curabitur vitae aliquam metus. Sed lacus nunc, fringilla eu accumsan a, euismod a nisl.
-                            Mauris mauris lorem, ornare non ex eu, tincidunt tempor sem. Aliquam pretium, diam eu
-                            bibendum ultricies, est ligula elementum metus, sed malesuada nulla tellus sed lacus.
-                            Pellentesque pharetra eros eleifend lobortis sollicitudin.</p>
+                            Curabitur vitae aliquam metus.</p>
                     </section>
                 </div>
             </div>
@@ -47,13 +45,11 @@
                         <h3>Иван Иванов</h3>
                         <p>Кто-то там</p>
                     </section>
-                    <section>
+                    <section class="review-text">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula, risus at pretium
                             efficitur, magna ante gravida nunc, ac bibendum lacus felis malesuada velit. Quisque vitae
                             nibh ante. In at dignissim ex, non eleifend augue. Nulla at ex elementum, hendrerit lectus
-                            non, porta diam. Vestibulum fermentum lectus nibh, et fermentum urna pellentesque at.
-                            Curabitur vitae aliquam metus. Sed lacus nunc, fringilla eu accumsan a, euismod a nisl.
-                            Mauris mauris lorem, ornare non ex eu, tincidunt tempor sem.</p>
+                            non, porta diam.</p>
                     </section>
                 </div>
             </div>
@@ -63,22 +59,44 @@
                         <h3>Иван Иванов</h3>
                         <p>Кто-то там</p>
                     </section>
-                    <section>
+                    <section class="review-text">
                         <p>Integer vehicula, risus at pretium efficitur, magna ante gravida nunc, ac bibendum lacus
                             felis malesuada velit. Quisque vitae nibh ante. In at dignissim ex, non eleifend augue.
                             Nulla at ex elementum, hendrerit lectus non, porta diam. Vestibulum fermentum lectus nibh,
-                            et fermentum urna pellentesque at. Curabitur vitae aliquam metus. Sed lacus nunc, fringilla
-                            eu accumsan a, euismod a nisl. Mauris mauris lorem, ornare non ex eu, tincidunt tempor sem.
-                            Aliquam pretium, diam eu bibendum ultricies, est ligula elementum metus, sed malesuada nulla
-                            tellus sed lacus. Pellentesque pharetra eros eleifend lobortis sollicitudin.
+                            et fermentum urna pellentesque at.
                         </p>
                     </section>
                 </div>
             </div>
         </section>
+        <section class="flexcol-container feedback-form">
+            <form>
+                <h1>Остаьте свой отзыв!</h2>
+                <div class="form-container">
+                    <div class="input-container">
+                        <label>Ваше имя</label>
+                        <input class="regular" type="text" name="name" required>
+                    </div>
+                    <div class="input-container">
+                        <label>Вид деятельности</label>
+                        <input class="regular" type="text" name="job" required>
+                    </div>
+                    <div class="input-container">
+                        <label>Ваш email</label>
+                        <input class="regular" type="email" name="email" required>
+                    </div>
+                    <div class="description-container">
+                        <textarea class="description" name="review" required></textarea>
+                    </div>
+                    <div id="button-holder">
+                        <input class="button" type="submit">
+                    </div>
+                </div>
+            </form>
+        </section>
     </main>
 
     <footer-component></footer-component>
 </body>
-
+<script src="../js/form-submit.js"></script>
 </html>

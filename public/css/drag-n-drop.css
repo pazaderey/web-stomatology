@@ -1,0 +1,48 @@
+#drop-area {
+  display: flex;
+  flex-direction: column;
+  border: 2px dashed #ccc;
+  border-radius: 1rem;
+  width: 60%;
+  padding: 3%;
+  background-image: url("../img/upload.png");
+  background-size: 12rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-clip: border-box;
+}
+
+#drop-area.highlight {
+  border-color: purple;
+}
+
+form#detect-form {
+  text-align: center;
+  min-height: 12rem;
+  width: 100%;
+  padding-bottom: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#detect-input-file {
+  display: none;
+}
+
+.loader {
+    height: 7rem;
+}
+
+label.button {
+  display: block;
+  width: 15rem;
+  background-color: #fff;
+}
+
+@media (max-width: 800px) {
+  #drop-area {
+    width: 80%;
+  }
+}

@@ -10,12 +10,14 @@ const AVAILABLE_URLS = new Set([
     "/help",
     "/detect",
     "/login",
+    "/profile",
 ]);
 
+app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")))
 
 app.get(/.+/, (req, res) => {
-    const url = req.url === "/" ? "/index" : req.url;
+    const url = req.path === "/" ? "/index" : req.path;
     if (!AVAILABLE_URLS.has(url)) {
         res.sendFile(path.join(__dirname, "public/html/not-found.html"));
         return;
@@ -23,4 +25,11 @@ app.get(/.+/, (req, res) => {
     res.sendFile(path.join(__dirname, `public/html${url}.html`));
 });
 
-app.listen(4000, () => console.log("started"));
+app.post("/form", (req, res) => {
+    globalThis.setTimeout(() => {
+        res.sendStatus(200);
+    }, 5000);
+    
+});
+
+app.listen(4000, () => console.log("started on 4000"));
