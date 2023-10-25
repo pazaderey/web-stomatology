@@ -1,18 +1,18 @@
-section > h4 {
+section > h4, section > h5 {
   margin-bottom: 2%;
   margin-top: 2%;
 }
 
-div.profile-input-contianer {
+div.profile-input-container {
   display: grid;
-  grid-template-columns: 2fr 3fr;
+  grid-template-columns: 1fr 3fr;
   justify-content: space-between;
 }
 
-div.profile-input-contianer > select,
-div.profile-input-contianer > input {
+div.profile-input-container > select,
+div.profile-input-container > input {
   font-size: 1.3rem;
-  width: 80%;
+  width: 40%;
 }
 
 div#buttons-wrapper {
@@ -63,10 +63,30 @@ th.file-col {
   min-width: 10rem;
 }
 
-@media (max-width: 500px) {
-  div.profile-input-contianer > select,
-  div.profile-input-contianer > input,
-  div.profile-input-contianer > label {
+.invite-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 4%;
+  max-width: 30rem;
+}
+
+#invite-btn {
+  text-align: center;
+}
+
+#invite-input, #invite-btn {
+  font-size: 1.3rem;
+  width: 46%;
+  min-width: 13rem;
+}
+
+@media (max-width: 700px) {
+  div.profile-input-container > select,
+  div.profile-input-container > input,
+  div.profile-input-container > label,
+  .grid-2rows-container {
     font-size: 1.1rem;
     width: 90%;
   }

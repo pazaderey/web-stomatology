@@ -1,41 +1,45 @@
 section.feedback-head {
-    height: fit-content;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .feedback-head > h1 {
-    width: 60%;
-    height: 100%;
-    font-size: 3rem;
-    text-align: left;
-    padding-top: 1rem;
-    margin-bottom: 0;
-    border-bottom: 1px solid #d3d3d3;
+  width: 60%;
+  height: 100%;
+  font-size: 3rem;
+  text-align: left;
+  padding-top: 1rem;
+  margin-bottom: 0;
+  border-bottom: 1px solid #d3d3d3;
 }
 
 section.reviews-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(17rem, 30rem));
-    justify-content: center;
-    width: 85%;
-    min-height: 30rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 30rem));
+  justify-content: center;
+  width: 85%;
+  min-height: 30rem;
 }
 
 .review-container > div > h2 {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
 div.review-wrapper {
-    padding: 1rem;
-    min-width: 17rem;
+  padding: 1rem;
+  min-width: 17rem;
 }
 
 div.review {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+div.review > section {
+  width: 100%;
 }
 
 div.review > section {
@@ -43,25 +47,25 @@ div.review > section {
 }
 
 div.review > h3 {
-    margin: 0;
+  margin: 0;
 }
 
 div.review > section > p {
-    text-align: justify;
-    font-size: 1.5rem;
-    overflow-wrap: break-word;
+  text-align: justify;
+  font-size: 1.5rem;
+  overflow-wrap: break-word;
 }
 
 @media (max-width: 350px) {
-    section.feedback-head {
-        height: 10rem;
-    }
+  section.feedback-head {
+    height: 10rem;
+  }
 
-    .feedback-head > h1 {
-        font-size: 3rem;
-    }
+  .feedback-head > h1 {
+    font-size: 3rem;
+  }
 
-    div.review-wrapper {
-        min-width: 10rem;
-    }
+  div.review-wrapper {
+    min-width: 10rem;
+  }
 }

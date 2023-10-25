@@ -9,23 +9,23 @@ prevButton.addEventListener('click', showPreviousSlide);
 nextButton.addEventListener('click', showNextSlide);
 
 function showPreviousSlide() {
-  slideIndex = (slideIndex - 1 + slideCount) % slideCount;
-  updateSlider();
+    slideIndex = (slideIndex - 1 + slideCount) % slideCount;
+    updateSlider();
 }
 
 function showNextSlide() {
-  slideIndex = (slideIndex + 1) % slideCount;
-  updateSlider();
+    slideIndex = (slideIndex + 1) % slideCount;
+    updateSlider();
 }
 
 function updateSlider() {
-  slides.forEach((slide, index) => {
-    if (index === slideIndex) {
-      slide.style.display = 'block';
-    } else {
-      slide.style.display = 'none';
-    }
-  });
+    slides.forEach((slide, index) => {
+        if (index === slideIndex) {
+            slide.style.display = 'block';
+        } else {
+            slide.style.display = 'none';
+        }
+    });
 }
 
 updateSlider();
