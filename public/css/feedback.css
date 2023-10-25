@@ -42,6 +42,10 @@ div.review > section {
   width: 100%;
 }
 
+div.review > section {
+    width: 100%;
+}
+
 div.review > h3 {
   margin: 0;
 }
