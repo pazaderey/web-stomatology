@@ -3,6 +3,13 @@ section > h4, section > h5 {
   margin-top: 2%;
 }
 
+input[name="name"] {
+  margin-bottom: 2%;
+  margin-top: 2%;
+  font-size: 3rem;
+  border: 0;
+}
+
 div.profile-input-container {
   display: grid;
   grid-template-columns: 1fr 3fr;

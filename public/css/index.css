@@ -92,41 +92,6 @@ section.flexrow-container > img {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.article-container {
-  padding: 5%;
-}
-
-.article-container > h5 {
-  margin: 0;
-  padding-top: 1%;
-  font-size: 1.3rem;
-}
-
-.article-container > label {
-  display: block;
-  height: 2rem;
-  width: 10rem;
-  text-align: center;
-  font-size: 1.3rem;
-}
-
-.article-container > label > a {
-  text-decoration-line: none;
-}
-
-p.article-date {
-  margin: 0;
-  font-size: 1rem;
-}
-
-p.article-authors {
-  padding-top: 2%;
-  margin: 0;
-  font-size: 1rem;
-  color: gray;
-  padding-bottom: 5%;
-}
-
 section#login {
   display: flex;
   justify-content: center;

@@ -54,9 +54,9 @@ function startLoading() {
  */
 async function uploadFile(file) {
     const data = new FormData();
-    data.append('file', file);
+    data.append("detect-image", file);
 
-    return fetch("/form", {
+    return fetch("http://localhost:3000/detection", {
         method: "POST",
         body: data,
     });
