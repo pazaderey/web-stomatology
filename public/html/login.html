@@ -23,6 +23,7 @@
                     <label>Пароль</label>
                     <input type="password" required name="password" autocomplete="current-password">
                 </div>
+                <h4 id="wrong-password" hidden>Неправильный пароль</h4>
                 <div class="flexcol-container login-container">
                     <button id="login-button" type="submit">Войти</button>
                 </div>
@@ -34,8 +35,14 @@
 </body>
 <script src="../js/login-service.js"></script>
 <script>
-    const service = new LoginService();
-    const loginForm = document.querySelector("form");
-    loginForm.addEventListener("submit", service.login.bind(service, loginForm));
+    const userLogin = window.sessionStorage.getItem("userId");
+    if(userLogin !== null) {
+        window.location.href = "/profile";
+    } else {
+        const service = new LoginService();
+        const loginForm = document.querySelector("form");
+        loginForm.addEventListener("submit", service.login.bind(service));
+        loginForm.addEventListener("change", service.hideWrongPassword.bind(service));
+    }
 </script>
 </html>

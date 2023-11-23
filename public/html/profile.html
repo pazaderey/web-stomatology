@@ -84,6 +84,7 @@
                     <button id="invite-btn" type="submit">Пригласить</button>
                 </div>
             </form>
+            <button id="quit-btn">Выйти</button>
         </section>
     </main>
 
@@ -97,5 +98,6 @@
     service.getUser();
     const inviteForm = document.querySelector("form#invite-form");
     inviteForm.addEventListener("submit", service.inviteUser.bind(service));
+    document.querySelector("#quit-btn").addEventListener("click", service.quit.bind(service));
 </script>
 </html>

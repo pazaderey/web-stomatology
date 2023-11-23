@@ -1,5 +1,18 @@
 class LoginService {
+    /**
+     * 
+     */
     #fetchString;
+
+    /**
+     * 
+     */
+    #wp = document.querySelector("#wrong-password");
+
+    /**
+     * 
+     */
+    #form = document.querySelector("form");
 
     /**
      * 
@@ -11,10 +24,9 @@ class LoginService {
     }
 
     /**
-     * @param {HTMLFormElement} form
      * @param {Event} event
      */
-    async login(form, event) {
+    async login(event) {
         event.preventDefault();
         event.stopPropagation();
 
@@ -24,14 +36,31 @@ class LoginService {
         fetch(this.#fetchString + "/login", {
             method: "POST",
             headers: new Headers({"content-type": "application/json"}),
-            body: JSON.stringify(requestBody)
-        }).then((resp) => {
-            if (resp.status !== 403) {
+            body: JSON.stringify(requestBody),
+        }).then(async (resp) => {
+            const token = (await resp.json()).token;
+            if (resp.status === 200 && token) {
+                window.sessionStorage.setItem("userId", requestBody.login);
+                window.sessionStorage.setItem("userToken", token);
                 window.location.href = "/profile";
             } else {
-                console.error(resp.status, resp.statusText);
-                form.reset()
+                this.wrongPassword(new Error(resp.statusText));
             }
-        });
+        }).catch(this.wrongPassword.bind(this));
+    }
+
+    /**
+     * 
+     * @param {Error} err 
+     */
+    async wrongPassword(err) {
+        //console.error(err);
+        this.#form.reset();
+        
+        this.#wp.removeAttribute("hidden");
+    }
+
+    hideWrongPassword() {
+        this.#wp.setAttribute("hidden", true);
     }
 }

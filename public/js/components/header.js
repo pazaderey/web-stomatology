@@ -3,7 +3,7 @@ headerTemplate.innerHTML = `
 <style>
     #header {
         width: 100%;
-        background-color: #BD81C9;
+        background-color: #86b6da;
         height: 4.5rem;
         display: flex;
         position: sticky;

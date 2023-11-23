@@ -79,8 +79,14 @@ th.file-col {
   max-width: 30rem;
 }
 
-#invite-btn {
+#invite-btn, #quit-btn {
   text-align: center;
+  font-size: 1.3rem;
+}
+
+#quit-btn {
+  margin-top: 2rem;
+  width: 10%;
 }
 
 #invite-input, #invite-btn {

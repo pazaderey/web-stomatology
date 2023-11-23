@@ -17,9 +17,26 @@ class UserService {
      * 
      */
     async getUser() {
-        const data = await fetch(this.#fetchString, {
-            method: "GET"
+        const userLogin = window.sessionStorage.getItem("userId");
+        const userToken = window.sessionStorage.getItem("userToken");
+        if(userLogin === null || userToken === null) {
+            window.sessionStorage.removeItem("userId");
+            window.sessionStorage.removeItem("userToken");
+            window.location.href = "/login";
+            return;
+        }
+
+        const data = await fetch(this.#fetchString + `?login=${userLogin}`, {
+            method: "GET",
+            headers: new Headers({"x-access-token" : userToken}),
         });
+        if (data.status === 403) {
+            window.sessionStorage.removeItem("userId");
+            window.sessionStorage.removeItem("userToken");
+            window.location.href = "/login";
+            return;
+        }
+
         const user = await data.json();
         
         const profileForm = document.querySelector("form#profile-form");
@@ -51,10 +68,21 @@ class UserService {
 
         const data = new FormData(event.target);
         const requestBody = Object.fromEntries(data.entries());
+        console.log(requestBody);
+        const token = window.sessionStorage.getItem("userToken");
+        if(!token) {
+            return;
+        }
+
+        const login = window.sessionStorage.getItem("userId");
+        requestBody.login = login;
 
         await fetch(this.#fetchString, {
             method: "PATCH",
-            headers: new Headers({'content-type': 'application/json'}),
+            headers: new Headers({
+                "content-type": "application/json",
+                "x-access-token": token
+            }),
             body: JSON.stringify(requestBody),
         });
     }
@@ -68,8 +96,19 @@ class UserService {
 
         const data = new FormData(event.target);
         const requestBody = Object.fromEntries(data.entries());
+        const token = window.sessionStorage.getItem("userToken");
+        if(!token) {
+            return;
+        }
         fetch(`http://localhost:3000/auth/invite?email=${requestBody.email}`, {
-            method: "POST"
+            method: "POST",
+            headers: new Headers({"x-access-token": token}),
         });
+    }
+
+    quit() {
+        window.sessionStorage.removeItem("userId");
+        window.sessionStorage.removeItem("userToken");
+        window.location.href = "/login";
     }
 }
