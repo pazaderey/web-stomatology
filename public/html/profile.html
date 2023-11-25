@@ -17,22 +17,22 @@
 
     <main>
         <section id="profile-info">
-            <h4>Иван Иванов</h4>
-            <form onchange="addButtons()">
+            <form id="profile-form" onchange="addButtons()">
+                <input type="text" name="name" required>
                 <div class="profile-input-container">
                     <label>Пол</label>
                     <select name="sex" required>
-                        <option value="m" selected>Мужской</option>
+                        <option value="m">Мужской</option>
                         <option value="f">Женский</option>
                     </select>
                 </div>
                 <div class="profile-input-container">
                     <label>Email</label>
-                    <input type="email" required value="ivanov@email.abc">
+                    <input type="email" name="email" required>
                 </div>
                 <div class="profile-input-container">
                     <label>Телефон</label>
-                    <input type="tel" required value="+7-888-888-88-88">
+                    <input type="tel" required name="phone">
                 </div>
                 <div class="profile-input-container" id="buttons-wrapper">
                     <button type="submit">Сохранить</button>
@@ -78,18 +78,26 @@
         </section>
         <section>
             <h5>Отправить приглашение в систему</h5>
-            <form>
+            <form id="invite-form">
                 <div class="invite-container">
-                    <input id="invite-input" type="email" placeholder="example@mail.com" required>
+                    <input id="invite-input" type="email" name="email" placeholder="example@mail.com" required>
                     <button id="invite-btn" type="submit">Пригласить</button>
                 </div>
             </form>
+            <button id="quit-btn">Выйти</button>
         </section>
     </main>
 
     <footer-component></footer-component>
 </body>
-<script src="../js/table-colorer.js"></script>
-<script src="../js/profile-saver.js"></script>
+<script src="../js/profile-utils.js"></script>
+<script src="../js/user-service.js"></script>
+<script>
+    const service = new UserService();
 
+    service.getUser();
+    const inviteForm = document.querySelector("form#invite-form");
+    inviteForm.addEventListener("submit", service.inviteUser.bind(service));
+    document.querySelector("#quit-btn").addEventListener("click", service.quit.bind(service));
+</script>
 </html>

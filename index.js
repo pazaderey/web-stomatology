@@ -25,11 +25,4 @@ app.get(/.+/, (req, res) => {
     res.sendFile(path.join(__dirname, `public/html${url}.html`));
 });
 
-app.post("/form", (req, res) => {
-    globalThis.setTimeout(() => {
-        res.sendStatus(200);
-    }, 5000);
-    
-});
-
 app.listen(4000, () => console.log("started on 4000"));

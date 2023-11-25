@@ -27,35 +27,6 @@ section.reviews-container {
   font-size: 3rem;
 }
 
-div.review-wrapper {
-  padding: 1rem;
-  min-width: 17rem;
-}
-
-div.review {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-div.review > section {
-  width: 100%;
-}
-
-div.review > section {
-    width: 100%;
-}
-
-div.review > h3 {
-  margin: 0;
-}
-
-div.review > section > p {
-  text-align: justify;
-  font-size: 1.5rem;
-  overflow-wrap: break-word;
-}
-
 @media (max-width: 350px) {
   section.feedback-head {
     height: 10rem;
@@ -63,9 +34,5 @@ div.review > section > p {
 
   .feedback-head > h1 {
     font-size: 3rem;
-  }
-
-  div.review-wrapper {
-    min-width: 10rem;
   }
 }

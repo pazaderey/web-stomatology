@@ -2,6 +2,7 @@ const footerTemplate = document.createElement("template");
 footerTemplate.innerHTML = `
 <style>
 #footer {
+    --additional-color: #86b6da;
     height: 12rem;
     display: flex;
     flex-direction: row;
@@ -33,7 +34,7 @@ footerTemplate.innerHTML = `
 
 .footer-copyright {
     height: 3rem;
-    background-color: #BD81C9;
+    background-color: var(--additional-color);
 }
 
 span.contacts {

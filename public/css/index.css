@@ -1,5 +1,5 @@
 body {
-  --additional-color: #bd81c9;
+  --additional-color: #86b6da;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   margin: 0;
   min-width: 280px;
@@ -36,7 +36,7 @@ button, .button {
 }
 
 button:hover, .button:hover {
-  background-color: #bd81c9;
+  background-color: var(--additional-color);
 }
 
 section.main-section {
@@ -92,41 +92,6 @@ section.flexrow-container > img {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.article-container {
-  padding: 5%;
-}
-
-.article-container > h5 {
-  margin: 0;
-  padding-top: 1%;
-  font-size: 1.3rem;
-}
-
-.article-container > label {
-  display: block;
-  height: 2rem;
-  width: 10rem;
-  text-align: center;
-  font-size: 1.3rem;
-}
-
-.article-container > label > a {
-  text-decoration-line: none;
-}
-
-p.article-date {
-  margin: 0;
-  font-size: 1rem;
-}
-
-p.article-authors {
-  padding-top: 2%;
-  margin: 0;
-  font-size: 1rem;
-  color: gray;
-  padding-bottom: 5%;
-}
-
 section#login {
   display: flex;
   justify-content: center;
@@ -154,6 +119,14 @@ section#login {
   width: 50%;
   height: 50%;
   font-size: 1.6rem;
+}
+
+#wrong-password {
+  margin: 0;
+  padding: 0.5rem;
+  border-radius: 15px;
+  background-color: #e75480;
+  font-weight: normal;
 }
 
 @media (max-width: 1110px) {

@@ -53,11 +53,18 @@ function startLoading() {
  * @param {File} file 
  */
 async function uploadFile(file) {
-    const data = new FormData();
-    data.append('file', file);
+    const token = window.sessionStorage.getItem("userToken");
+    if(!token) {
+        window.location.href = "/login";
+        return;
+    }
 
-    return fetch("/form", {
+    const data = new FormData();
+    data.append("detect-image", file);
+
+    return fetch("http://localhost:3000/detection", {
         method: "POST",
+        headers: new Headers({"x-access-token": token}),
         body: data,
     });
 }

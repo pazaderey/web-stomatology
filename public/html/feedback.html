@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../css/feedback-form.css" />
     <script src="../js/components/header.js" type="text/javascript" defer></script>
     <script src="../js/components/footer.js" type="text/javascript" defer></script>
+    <script src="../js/components/review.js" type="text/javascript" defer></script>
 </head>
 
 <body>
@@ -21,53 +22,6 @@
             <h1>Отзывы</h1>
         </section>
         <section class="reviews-container">
-            <!--             <div>
-                <h2>Пока что здесь пусто...</h2>
-            </div> -->
-            <div class="review-wrapper">
-                <div class="review">
-                    <section>
-                        <h3>Иван Иванов</h3>
-                        <p>Кто-то там</p>
-                    </section>
-                    <section class="review-text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula, risus at pretium
-                            efficitur, magna ante gravida nunc, ac bibendum lacus felis malesuada velit. Quisque vitae
-                            nibh ante. In at dignissim ex, non eleifend augue. Nulla at ex elementum, hendrerit lectus
-                            non, porta diam. Vestibulum fermentum lectus nibh, et fermentum urna pellentesque at.
-                            Curabitur vitae aliquam metus.</p>
-                    </section>
-                </div>
-            </div>
-            <div class="review-wrapper">
-                <div class="review">
-                    <section>
-                        <h3>Иван Иванов</h3>
-                        <p>Кто-то там</p>
-                    </section>
-                    <section class="review-text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula, risus at pretium
-                            efficitur, magna ante gravida nunc, ac bibendum lacus felis malesuada velit. Quisque vitae
-                            nibh ante. In at dignissim ex, non eleifend augue. Nulla at ex elementum, hendrerit lectus
-                            non, porta diam.</p>
-                    </section>
-                </div>
-            </div>
-            <div class="review-wrapper">
-                <div class="review">
-                    <section>
-                        <h3>Иван Иванов</h3>
-                        <p>Кто-то там</p>
-                    </section>
-                    <section class="review-text">
-                        <p>Integer vehicula, risus at pretium efficitur, magna ante gravida nunc, ac bibendum lacus
-                            felis malesuada velit. Quisque vitae nibh ante. In at dignissim ex, non eleifend augue.
-                            Nulla at ex elementum, hendrerit lectus non, porta diam. Vestibulum fermentum lectus nibh,
-                            et fermentum urna pellentesque at.
-                        </p>
-                    </section>
-                </div>
-            </div>
         </section>
         <section class="flexcol-container feedback-form">
             <form>
@@ -86,7 +40,7 @@
                         <input class="regular" type="email" name="email" required>
                     </div>
                     <div class="description-container">
-                        <textarea class="description" name="review" required></textarea>
+                        <textarea class="description" name="text" required></textarea>
                     </div>
                     <div id="button-holder">
                         <input class="button" type="submit">
@@ -98,5 +52,13 @@
 
     <footer-component></footer-component>
 </body>
-<script src="../js/form-submit.js"></script>
+<script src="../js/review-service.js"></script>
+<script>
+    const service = new ReviewService();
+
+    const form = document.querySelector("form");
+    form.addEventListener("submit", service.addReview.bind(service));
+
+    service.getReviews();
+</script>
 </html>
