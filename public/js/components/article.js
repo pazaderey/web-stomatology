@@ -14,7 +14,7 @@ class Article extends HTMLElement {
         articleTemplate.innerHTML = `
         <style>
             button:hover, .button:hover {
-                background-color: #bd81c9;
+                background-color: #86b6da;
             }
 
             a.black-link {

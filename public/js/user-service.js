@@ -30,7 +30,7 @@ class UserService {
             method: "GET",
             headers: new Headers({"x-access-token" : userToken}),
         });
-        if (data.status === 403) {
+        if (data.status !== 200) {
             window.sessionStorage.removeItem("userId");
             window.sessionStorage.removeItem("userToken");
             window.location.href = "/login";
@@ -103,7 +103,7 @@ class UserService {
         fetch(`http://localhost:3000/auth/invite?email=${requestBody.email}`, {
             method: "POST",
             headers: new Headers({"x-access-token": token}),
-        });
+        }).then((resp) => console.log(resp.status));
     }
 
     quit() {
