@@ -25,4 +25,4 @@ app.get(/.+/, (req, res) => {
     res.sendFile(path.join(__dirname, `public/html${url}.html`));
 });
 
-app.listen(4000, () => console.log("started on 4000"));
+app.listen(80, () => console.log("started on 80"));

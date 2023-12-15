@@ -54,7 +54,6 @@ class LoginService {
      * @param {Error} err 
      */
     async wrongPassword(err) {
-        //console.error(err);
         this.#form.reset();
         
         this.#wp.removeAttribute("hidden");

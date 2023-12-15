@@ -19,15 +19,15 @@ class ArticleService {
     async getArticles() {
         const data = await this.#fetchArticles();
         const articleContainer = document.querySelector("section#articles > div");
-        for (const review of data) {
-            const elem = this.#createReviewElem(review);
+        for (const article of data) {
+            const elem = this.#createArticleElem(article);
             articleContainer.appendChild(elem);
         }
     }
 
     /**
      * 
-     * @returns {Promise<{name : string;job : string;text : string;}[]>}
+     * @returns {Promise<{name: string; job : string; text :string;}[]>}
      */
     async #fetchArticles() {
         try {
@@ -42,14 +42,14 @@ class ArticleService {
     }
 
     /**
-     * @param {{date: string;title: string;authors: string;text: string;}} article 
+     * @param {{date: string; title: string; authors: string; text: string;}} article 
      */
-    #createReviewElem(article) {
+    #createArticleElem(article) {
         const articleElem = document.createElement("article-component");
         articleElem.setAttribute("date", article.date);
         articleElem.setAttribute("title", article.title);
         articleElem.setAttribute("authors", article.authors);
-        articleElem.setAttribute("text", article.text);
+        articleElem.setAttribute("link", article.link);
         return articleElem;
     }
 }
